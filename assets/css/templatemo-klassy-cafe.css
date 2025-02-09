@@ -662,6 +662,37 @@ header
   }
 }
 
+@media (max-width: 500px) {
+  .inner-content {
+      flex-direction: row !important;
+      justify-content: space-between; /* Optional: Adjust spacing */
+      align-items: center; /* Optional: Align vertically */
+      
+  }
+  .catch-holder {
+    width: 300px;
+    margin: 5%;
+  }
+
+  .button-holder {
+    margin: 5%;
+  }
+
+
+@media (max-width: 400px) {
+  .pasta-text {
+    font-size: 27px !important;
+  }
+
+  .catch-text {
+    font-size: 10px !important;
+  }
+  .catch-holder {
+    width: 200px;
+  }
+
+}
+}
 /* 
 ---------------------------------------------
 banner
