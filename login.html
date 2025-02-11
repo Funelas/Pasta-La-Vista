@@ -22,28 +22,60 @@
     </div>  
 
     <header class="header-area header-sticky">
-        <div class="container-xxl">
-            <div class="row">
-                <div class="col-12">
-                    <nav class="main-nav">
-                        <!-- ***** Logo Start ***** -->
-                        <a href="index.html" class="logo">
-                        <img class= "pasta-logo" src="assets/custom-images/Pasta La Vista Logo.png" align="klassy cafe html template">
-                        </a>
-                        <!-- ***** Logo End ***** -->
-                        <!-- ***** Menu Start ***** -->
-                        
-                        <!-- ***** Menu End ***** -->
-                    </nav>
-                </div>
-            </div>
-        </div>
-    </header>
+      <div class="container-xxl">
+          <div class="row">
+              <div class="col-12">
+                  <nav class="main-nav">
+                      <!-- ***** Logo Start ***** -->
+                      <a href="index.html" class="logo">
+                      <img class= "pasta-logo" src="assets/custom-images/Pasta La Vista Logo.png" align="klassy cafe html template">
+                      </a>
+                      <!-- ***** Logo End ***** -->
+                      <!-- ***** Menu Start ***** -->
+                      <ul class="nav">
+                          <li class="scroll-to-section"><a href="index.html" class="active">Home</a></li>
+                          <li class="scroll-to-section"><a href="index.html">About</a></li>
+                           
+                      <!-- 
+                          <li class="submenu">
+                              <a href="javascript:;">Drop Down</a>
+                              <ul>
+                                  <li><a href="#">Drop Down Page 1</a></li>
+                                  <li><a href="#">Drop Down Page 2</a></li>
+                                  <li><a href="#">Drop Down Page 3</a></li>
+                              </ul>
+                          </li>
+                      -->
+                          
+                          <li class="scroll-to-section"><a href="index.html">Chefs</a></li> 
+                          <!-- <li class="submenu">
+                              <a href="javascript:;">Features</a>
+                              <ul>
+                                  <li><a href="#">Features Page 1</a></li>
+                                  <li><a href="#">Features Page 2</a></li>
+                                  <li><a href="#">Features Page 3</a></li>
+                                  <li><a href="#">Features Page 4</a></li>
+                              </ul>
+                          </li> -->
+                          <!-- <li class=""><a rel="sponsored" href="https://templatemo.com" target="_blank">External URL</a></li> -->
+                          <li class="scroll-to-section"><a href="#con-info">Contact Us</a></li> 
+                          <li class="scroll-to-section"><a href="menu.html">Menu</a></li>
+                          <li class="scroll-to-section"><a href="login.html">Log in / Register</a></li>
+                      </ul>        
+                      <a class='menu-trigger'>
+                          <span>Menu</span>
+                      </a>
+                      <!-- ***** Menu End ***** -->
+                  </nav>
+              </div>
+          </div>
+      </div>
+  </header>
 
     <section class="section" id="reservation">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-6 align-self-center">
+            <div class="row justify-content-center">
+                <!-- <div class="col-lg-6 align-self-center">
                     <div class="left-text-content">
                         <div class="section-heading">
                             <h6>LOG IN&nbsp;</h6>
@@ -70,7 +102,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> -->
                 <div class="col-lg-6">
                     <div class="contact-form">
                         <form id="contact" action="" method="post">
@@ -108,42 +140,74 @@
             </div>
         </div>
     </section>
-      <!-- jQuery -->
-      <script src="assets/js/jquery-2.1.0.min.js"></script>
+    <footer id="con-info">
+      <div class="container">
+          <div class="row">
+              <div class="col-lg-4 col-xs-12">
+                  <div class="right-text-content">
+                          <ul class="social-icons">
+                              <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                              <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                              <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                              <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                          </ul>
+                          <ul class="mt-2 justify-content-start">
+                              <li class="ml-1 text-white"><i class="fa fa-phone mr-2"></i>Phone Number: 09120220250</li>
+                              <li class="ml-1 text-white"><i class="fa fa-envelope mr-2"></i>Email: pastalavistababy@e.com</li>
+                          </ul>
+                  </div>
+              </div>
+              <div class="col-lg-4">
+                  <div class="logo">
+                      <a href="index.html"><img class="pasta-logo" src="assets/custom-images/Pasta La Vista Logo.png" alt=""></a>
+                  </div>
+              </div>
+              <div class="col-lg-4 col-xs-12">
+                  <div class="left-text-content">
+                      <p>© Copyright Group 5
+                      <br>Design: Credits to TemplateMo</p>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </footer>
+     <!-- jQuery -->
+     <script src="assets/js/jquery-2.1.0.min.js"></script>
 
-      <!-- Bootstrap -->
-      <script src="assets/js/popper.js"></script>
-      <script src="assets/js/bootstrap.min.js"></script>
-  
-      <!-- Plugins -->
-      <script src="assets/js/owl-carousel.js"></script>
-      <script src="assets/js/accordions.js"></script>
-      <script src="assets/js/datepicker.js"></script>
-      <script src="assets/js/scrollreveal.min.js"></script>
-      <script src="assets/js/waypoints.min.js"></script>
-      <script src="assets/js/jquery.counterup.min.js"></script>
-      <script src="assets/js/imgfix.min.js"></script> 
-      <script src="assets/js/slick.js"></script> 
-      <script src="assets/js/lightbox.js"></script> 
-      <script src="assets/js/isotope.js"></script> 
-      
-    <script src="assets/js/custom.js"></script>
-    <script>
-
-        $(function() {
-            var selectedClass = "";
-            $("p").click(function(){
-            selectedClass = $(this).attr("data-rel");
-            $("#portfolio").fadeTo(50, 0.1);
-                $("#portfolio div").not("."+selectedClass).fadeOut();
-            setTimeout(function() {
-              $("."+selectedClass).fadeIn();
-              $("#portfolio").fadeTo(50, 1);
-            }, 500);
-                
-            });
-        });
-
-    </script>
+     <!-- Bootstrap -->
+     <script src="assets/js/popper.js"></script>
+     <script src="assets/js/bootstrap.min.js"></script>
+ 
+     <!-- Plugins -->
+     <script src="assets/js/owl-carousel.js"></script>
+     <script src="assets/js/accordions.js"></script>
+     <script src="assets/js/datepicker.js"></script>
+     <script src="assets/js/scrollreveal.min.js"></script>
+     <script src="assets/js/waypoints.min.js"></script>
+     <script src="assets/js/jquery.counterup.min.js"></script>
+     <script src="assets/js/imgfix.min.js"></script> 
+     <script src="assets/js/slick.js"></script> 
+     <script src="assets/js/lightbox.js"></script> 
+     <script src="assets/js/isotope.js"></script> 
+     
+     <!-- Global Init -->
+     <script src="assets/js/custom.js"></script>
+     <script>
+ 
+         $(function() {
+             var selectedClass = "";
+             $("p").click(function(){
+             selectedClass = $(this).attr("data-rel");
+             $("#portfolio").fadeTo(50, 0.1);
+                 $("#portfolio div").not("."+selectedClass).fadeOut();
+             setTimeout(function() {
+               $("."+selectedClass).fadeIn();
+               $("#portfolio").fadeTo(50, 1);
+             }, 500);
+                 
+             });
+         });
+ 
+     </script>
 </body>
 </html>

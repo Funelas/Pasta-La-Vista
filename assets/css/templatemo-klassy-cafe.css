@@ -691,6 +691,13 @@ header
     width: 200px;
   }
 
+  .image-resize{
+    height: 70px !important;
+    width: 70px !important;
+  }
+  .footer-li{
+    margin-left: 0px !important;
+  }
 }
 }
 /* 
@@ -751,6 +758,18 @@ banner
 }
 
 /* ==== Main CSS === */
+
+.section-img-bg {
+  background: url('../custom-images/menu-section-bg.jpg') no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed; /* Optional: Makes it stay while scrolling */
+  min-height: 300px; /* Adjust as needed */
+}
+
+.section-text {
+  color: #f95249 !important;
+  font-weight: 400 !important;
+}
 .img-fill{
   width: 100%;
   display: block;
@@ -766,6 +785,12 @@ banner
   position: relative;
   display: inline-block;
   max-width: none;
+}
+
+.image-resize{
+  width: 100px; /* Adjust the width */
+  height: 100px; /* Adjust the height */
+  object-fit: cover;
 }
 
 *,
@@ -976,19 +1001,19 @@ menu
 }
 
 .card1 {
-  background-image: url(../images/menu-item-01.jpg);
+  background-image: url('../custom-images/Breakfast Images/2.png');
 }
 .card2 {
-  background-image: url(../images/menu-item-02.jpg);
+  background-image: url('../custom-images/Dinner Images/1.jpg');
 }
 .card3 {
-  background-image: url(../images/menu-item-03.jpg);
+  background-image: url("../custom-images/Dinner Images/3.jpg");
 }
 .card4 {
-  background-image: url(../images/menu-item-04.jpg);
+  background-image: url('../custom-images/Dinner Images/6.jpg');
 }
 .card5 {
-  background-image: url(../images/menu-item-05.jpg);
+  background-image: url('../custom-images/Pastry Images/2.png');
 }
 
 .info {
