@@ -695,7 +695,9 @@ header
     height: 70px !important;
     width: 70px !important;
   }
-
+  .footer-li{
+    margin-left: 0px !important;
+  }
 }
 }
 /* 
@@ -999,19 +1001,19 @@ menu
 }
 
 .card1 {
-  background-image: url(../images/menu-item-01.jpg);
+  background-image: url('../custom-images/Breakfast Images/2.png');
 }
 .card2 {
-  background-image: url(../images/menu-item-02.jpg);
+  background-image: url('../custom-images/Dinner Images/1.jpg');
 }
 .card3 {
-  background-image: url(../images/menu-item-03.jpg);
+  background-image: url("../custom-images/Dinner Images/3.jpg");
 }
 .card4 {
-  background-image: url(../images/menu-item-04.jpg);
+  background-image: url('../custom-images/Dinner Images/6.jpg');
 }
 .card5 {
-  background-image: url(../images/menu-item-05.jpg);
+  background-image: url('../custom-images/Pastry Images/2.png');
 }
 
 .info {
