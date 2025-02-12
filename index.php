@@ -1,3 +1,8 @@
+<?php 
+
+    $submitted = !isset($_POST['submit']);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -52,7 +57,7 @@ https://templatemo.com/tm-558-klassy-cafe
                 <div class="col-12">
                     <nav class="main-nav">
                         <!-- ***** Logo Start ***** -->
-                        <a href="index.html" class="logo">
+                        <a href="index.php" class="logo">
                         <img class= "pasta-logo" src="assets/custom-images/Pasta La Vista Logo.png" align="klassy cafe html template">
                         </a>
                         <!-- ***** Logo End ***** -->
@@ -85,7 +90,11 @@ https://templatemo.com/tm-558-klassy-cafe
                             <!-- <li class=""><a rel="sponsored" href="https://templatemo.com" target="_blank">External URL</a></li> -->
                             <li class="scroll-to-section"><a href="#con-info">Contact Us</a></li> 
                             <li class="scroll-to-section"><a href="menu.html">Menu</a></li>
+                            <?php if($submitted){ ?>
                             <li class="scroll-to-section"><a href="login.html">Log in / Register</a></li>
+                            <?php }else{ ?>
+                            <li class="scroll-to-section"><a href="appointment.html">Set an Appointment</a></li>
+                            <?php } ?>
                         </ul>        
                         <a class='menu-trigger'>
                             <span>Menu</span>
@@ -96,6 +105,7 @@ https://templatemo.com/tm-558-klassy-cafe
             </div>
         </div>
     </header>
+
     <!-- ***** Header Area End ***** -->
 
     <!-- ***** Main Banner Area Start ***** -->
@@ -111,7 +121,7 @@ https://templatemo.com/tm-558-klassy-cafe
                             </div>
                             <div class="button-holder">
                                 <div class="main-white-button scroll-to-section d-flex justify-content-center align-items-center text-center">
-                                    <a href="#reservation">Make A Reservation</a>
+                                <a href="<?php echo $submitted ? 'register.html' : 'appointment.html'; ?>">Make A Reservation</a>
                             </div>
                             </div>
                         </div>
@@ -148,48 +158,8 @@ https://templatemo.com/tm-558-klassy-cafe
         </div>
     </div>
     <!-- ***** Main Banner Area End ***** -->
-
-    <!-- ***** About Area Starts ***** -->
-    <section class="section" id="about">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 col-md-6 col-xs-12">
-                    <div class="left-text-content">
-                        <div class="section-heading">
-                            <h6>About Us</h6>
-                            <h2>A Taste of Italy, Served Fresh at Your Table! </h2>
-                        </div>
-                        <p>At Pasta La Vista, we bring the heart of Italy to your table with fresh, handcrafted pasta and bold, authentic flavors. Every dish is made with the finest ingredients, combining tradition with a modern twist to create an unforgettable dining experience.</p>
-                        <div class="row">
-                            <div class="col-4">
-                                <img src="assets/custom-images/about1.jpg" alt="">
-                            </div>
-                            <div class="col-4">
-                                <img src="assets/custom-images/about2.jpg" alt="">
-                            </div>
-                            <div class="col-4">
-                                <img src="assets/custom-images/about3.jpg" alt="">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 col-md-6 col-xs-12">
-                    <div class="right-content">
-                        <div class="thumb embed-responsive embed-responsive-16by9">
-                            <iframe width="560" height="315" 
-                                    src="https://www.youtube.com/embed/OY0vJAKNGeY" 
-                                    frameborder="0" 
-                                    allowfullscreen></iframe>
-                          </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- ***** About Area Ends ***** -->
-
     <!-- ***** Menu Area Starts ***** -->
-    <section class="section" id="menu">
+    <section class="section mt-1" id="menu">
         <div class="container">
             <div class="row">
                 <div class="col-lg-4">
@@ -280,6 +250,46 @@ https://templatemo.com/tm-558-klassy-cafe
         </div>
     </section>
     <!-- ***** Menu Area Ends ***** -->
+    <!-- ***** About Area Starts ***** -->
+    <section class="section" id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-xs-12">
+                    <div class="left-text-content">
+                        <div class="section-heading">
+                            <h6>About Us</h6>
+                            <h2>A Taste of Italy, Served Fresh at Your Table! </h2>
+                        </div>
+                        <p>At Pasta La Vista, we bring the heart of Italy to your table with fresh, handcrafted pasta and bold, authentic flavors. Every dish is made with the finest ingredients, combining tradition with a modern twist to create an unforgettable dining experience.</p>
+                        <div class="row">
+                            <div class="col-4">
+                                <img src="assets/custom-images/about1.jpg" alt="">
+                            </div>
+                            <div class="col-4">
+                                <img src="assets/custom-images/about2.jpg" alt="">
+                            </div>
+                            <div class="col-4">
+                                <img src="assets/custom-images/about3.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-xs-12">
+                    <div class="right-content">
+                        <div class="thumb embed-responsive embed-responsive-16by9">
+                            <iframe width="560" height="315" 
+                                    src="https://www.youtube.com/embed/OY0vJAKNGeY" 
+                                    frameborder="0" 
+                                    allowfullscreen></iframe>
+                          </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ***** About Area Ends ***** -->
+
+    
 
     <!-- ***** Chefs Area Starts ***** -->
     <section class="section" id="chefs">
@@ -370,7 +380,7 @@ https://templatemo.com/tm-558-klassy-cafe
                 </div>
                 <div class="col-lg-4">
                     <div class="logo">
-                        <a href="index.html"><img class="pasta-logo" src="assets/custom-images/Pasta La Vista Logo.png" alt=""></a>
+                        <a href="index.php"><img class="pasta-logo" src="assets/custom-images/Pasta La Vista Logo.png" alt=""></a>
                     </div>
                 </div>
                 <div class="col-lg-4 col-xs-12">

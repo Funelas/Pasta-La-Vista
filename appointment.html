@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pasta La Vista Registration</title>
+    <title>Pasta La Vista Appointment</title>
     <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/templatemo-klassy-cafe.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -59,7 +59,8 @@
                             <!-- <li class=""><a rel="sponsored" href="https://templatemo.com" target="_blank">External URL</a></li> -->
                             <li class="scroll-to-section"><a href="#con-info">Contact Us</a></li> 
                             <li class="scroll-to-section"><a href="menu.html">Menu</a></li>
-                            <li class="scroll-to-section"><a href="login.html" class="active">Log in / Register</a></li>
+                            <!-- <li class="scroll-to-section"><a href="login.html">Log in / Register</a></li> -->
+                            <li class="scroll-to-section"><a href="appointment.html" class="active">Set an Appointment</a></li>
                         </ul>        
                         <a class='menu-trigger'>
                             <span>Menu</span>
@@ -74,13 +75,13 @@
     <section class="section" id="reservation">
         <div class="container">
             <div class="row justify-content-center">
-                <!-- <div class="col-lg-6 align-self-center">
+                <div class="col-lg-6 align-self-center">
                     <div class="left-text-content">
                         <div class="section-heading">
                             <h6>REGISTER</h6>
-                            <h2>New here? Sign up in seconds to start your delicious journey!</h2>
+                            <h2>Ready for a delicious experience? Reserve your table now!</h2>
                         </div>
-                        <p>Welcome to Pasta La Vista! Whether you're a returning pasta lover or a first-time visitor, sign in or create an account to enjoy exclusive benefits and special promos!</p>
+                        <p>Welcome to Pasta La Vista! Ensure a seamless dining experience by booking your table in advance. Savor authentic Italian flavors without the wait—reserve now and let us serve you the best pasta in town!</p>
 						<div class="section-heading">
                             <h6>CONTACT US&nbsp;</h6><br>
                         </div>
@@ -89,55 +90,91 @@
                                 <div class="phone">
                                     <i class="fa fa-phone"></i>
                                     <h4>Phone Numbers</h4>
-                                    <span><a href="#">080-090-0990</a><br><a href="#">080-090-0880</a></span>
+                                    <span><a href="#">09282987622</a><br><a href="#">09120220250</a></span>
                                 </div>
                           </div>
                             <div class="col-lg-6">
                                 <div class="message">
                                     <i class="fa fa-envelope"></i>
                                     <h4>Emails</h4>
-                                    <span><a href="#">hello@company.com</a><br><a href="#">info@company.com</a></span>
+                                    <span><a href="#">pastaalt.com</a><br><a href="#">pastalavistababy@e.com</a></span>
                                 </div>
                             </div>
                       </div>
                     </div>
-                </div> -->
+                </div>
                 <div class="col-lg-6">
                     <div class="contact-form">
-                        <form id="contact" action="index.php" method="post">
+                        <form id="contact" action="menu.html" method="post">
                           <div class="row">
                             <div class="col-lg-12">
-                                <h4>Sign Up</h4>
+                                <h4>Table Reservation</h4>
                             </div>
-                            <div class="col-lg-6 col-sm-12 col-xl-12">
+                            <div class="col-lg-6 col-sm-12">
                               <fieldset>
-                                <input name="name" type="text" id="name" placeholder="Name*" required="">
+                                <input name="name" type="text" id="name" placeholder="Your Name*" required="">
                               </fieldset>
                             </div>
-                            <div class="col-lg-6 col-sm-12 col-xl-12">
+                            <div class="col-lg-6 col-sm-12">
                               <fieldset>
-                              <input name="email" type="text" id="email" pattern="[^ @]*@[^ @]*" placeholder="Email Address*" required="">
+                              <input name="email" type="text" id="email" pattern="[^ @]*@[^ @]*" placeholder="Your Email Address" required="">
                             </fieldset>
                             </div>
-                            <div class="col-lg-6 col-sm-12 col-xl-12">
+                            <div class="col-lg-6 col-sm-12">
                               <fieldset>
-                                <input name="password" type="password" id="password" placeholder="Password*" required="">
+                                <input name="phone" type="text" id="phone" placeholder="Phone Number*" required="">
+                              </fieldset>
+                            </div>
+                            <div class="col-md-6 col-sm-12">
+                              <fieldset>
+                                <select value="number-guests" name="number-guests" id="number-guests">
+                                    <option value="number-guests">Number Of Guests</option>
+                                    <option name="1" id="1">1</option>
+                                    <option name="2" id="2">2</option>
+                                    <option name="3" id="3">3</option>
+                                    <option name="4" id="4">4</option>
+                                    <option name="5" id="5">5</option>
+                                    <option name="6" id="6">6</option>
+                                    <option name="7" id="7">7</option>
+                                    <option name="8" id="8">8</option>
+                                    <option name="9" id="9">9</option>
+                                    <option name="10" id="10">10</option>
+                                    <option name="11" id="11">11</option>
+                                    <option name="12" id="12">12</option>
+                                </select>
+                              </fieldset>
+                            </div>
+                            <div class="col-lg-6">
+                                <div id="filterDate2">    
+                                  <div class="input-group date" data-date-format="dd/mm/yyyy">
+                                    <input  name="date" id="date" type="text" class="form-control" placeholder="dd/mm/yyyy">
+                                    <div class="input-group-addon" >
+                                      <span class="glyphicon glyphicon-th"></span>
+                                    </div>
+                                  </div>
+                                </div>   
+                            </div>
+                            <div class="col-md-6 col-sm-12">
+                              <fieldset>
+                                <select value="time" name="time" id="time">
+                                    <option value="time">Time</option>
+                                    <option name="Breakfast" id="Breakfast">Breakfast</option>
+                                    <option name="Lunch" id="Lunch">Lunch</option>
+                                    <option name="Dinner" id="Dinner">Dinner</option>
+                                </select>
                               </fieldset>
                             </div>
                             <div class="col-lg-12">
-								<br>
+                              <fieldset>
+                                <textarea name="message" rows="6" id="message" placeholder="Message" required=""></textarea>
+                              </fieldset>
                             </div>
                             <div class="col-lg-12">
                               <fieldset>
-                                <button type="submit" name="submit" id="form-submit" class="main-button-icon">Register</button>
+                                <button type="submit" name="submit" id="form-submit" class="main-button-icon">Make A Reservation</button>
                               </fieldset>
                             </div>
-						  </div>
-							<div class="col-lg-12 text-center mt-2">
-    <small>
-        Already a member? <a href="login.html" style="color: #FF0000; text-decoration: none;">Log In here!</a>
-    </small>
-</div>
+                          </div>
                         </form>
                     </div>
                 </div>
