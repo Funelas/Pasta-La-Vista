@@ -158,48 +158,8 @@ https://templatemo.com/tm-558-klassy-cafe
         </div>
     </div>
     <!-- ***** Main Banner Area End ***** -->
-
-    <!-- ***** About Area Starts ***** -->
-    <section class="section" id="about">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 col-md-6 col-xs-12">
-                    <div class="left-text-content">
-                        <div class="section-heading">
-                            <h6>About Us</h6>
-                            <h2>A Taste of Italy, Served Fresh at Your Table! </h2>
-                        </div>
-                        <p>At Pasta La Vista, we bring the heart of Italy to your table with fresh, handcrafted pasta and bold, authentic flavors. Every dish is made with the finest ingredients, combining tradition with a modern twist to create an unforgettable dining experience.</p>
-                        <div class="row">
-                            <div class="col-4">
-                                <img src="assets/custom-images/about1.jpg" alt="">
-                            </div>
-                            <div class="col-4">
-                                <img src="assets/custom-images/about2.jpg" alt="">
-                            </div>
-                            <div class="col-4">
-                                <img src="assets/custom-images/about3.jpg" alt="">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 col-md-6 col-xs-12">
-                    <div class="right-content">
-                        <div class="thumb embed-responsive embed-responsive-16by9">
-                            <iframe width="560" height="315" 
-                                    src="https://www.youtube.com/embed/OY0vJAKNGeY" 
-                                    frameborder="0" 
-                                    allowfullscreen></iframe>
-                          </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- ***** About Area Ends ***** -->
-
     <!-- ***** Menu Area Starts ***** -->
-    <section class="section" id="menu">
+    <section class="section mt-1" id="menu">
         <div class="container">
             <div class="row">
                 <div class="col-lg-4">
@@ -290,6 +250,46 @@ https://templatemo.com/tm-558-klassy-cafe
         </div>
     </section>
     <!-- ***** Menu Area Ends ***** -->
+    <!-- ***** About Area Starts ***** -->
+    <section class="section" id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-xs-12">
+                    <div class="left-text-content">
+                        <div class="section-heading">
+                            <h6>About Us</h6>
+                            <h2>A Taste of Italy, Served Fresh at Your Table! </h2>
+                        </div>
+                        <p>At Pasta La Vista, we bring the heart of Italy to your table with fresh, handcrafted pasta and bold, authentic flavors. Every dish is made with the finest ingredients, combining tradition with a modern twist to create an unforgettable dining experience.</p>
+                        <div class="row">
+                            <div class="col-4">
+                                <img src="assets/custom-images/about1.jpg" alt="">
+                            </div>
+                            <div class="col-4">
+                                <img src="assets/custom-images/about2.jpg" alt="">
+                            </div>
+                            <div class="col-4">
+                                <img src="assets/custom-images/about3.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-xs-12">
+                    <div class="right-content">
+                        <div class="thumb embed-responsive embed-responsive-16by9">
+                            <iframe width="560" height="315" 
+                                    src="https://www.youtube.com/embed/OY0vJAKNGeY" 
+                                    frameborder="0" 
+                                    allowfullscreen></iframe>
+                          </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ***** About Area Ends ***** -->
+
+    
 
     <!-- ***** Chefs Area Starts ***** -->
     <section class="section" id="chefs">
