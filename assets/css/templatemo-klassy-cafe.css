@@ -644,6 +644,33 @@ header
   }
 }
 
+/* Menu */
+#nav-tab a.nav-link{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#nav-tab a.nav-link:hover{
+  color: #f95249 !important;
+}
+#nav-tab a.nav-link.active{
+  background-color: transparent !important;
+}
+
+#nav-tab a.nav-link:hover .pill-text{
+  color: #f95249;
+}
+
+#nav-tab a.nav-link.active .pill-text{
+  background-color: #008c45 !important;
+  color: #eee !important;
+}
+
+.pill-image{
+  width: 50%;
+}
+
 @media (min-width: 850px) {
   .header-area .main-nav .nav {
     display: flex !important;
