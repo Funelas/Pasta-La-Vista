@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap" rel="stylesheet">
-
+    <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.css">
     
 </head>
 <body>
@@ -21,56 +21,9 @@
         </div>
     </div>  
 
-    <header class="header-area header-sticky">
-      <div class="container-xxl">
-          <div class="row">
-              <div class="col-12">
-                  <nav class="main-nav">
-                      <!-- ***** Logo Start ***** -->
-                      <a href="index.php" class="logo">
-                      <img class= "pasta-logo" src="assets/custom-images/Pasta La Vista Logo.png" align="klassy cafe html template">
-                      </a>
-                      <!-- ***** Logo End ***** -->
-                      <!-- ***** Menu Start ***** -->
-                      <ul class="nav">
-                          <li class="scroll-to-section"><a href="index.php" class="active">Home</a></li>
-                          <li class="scroll-to-section"><a href="index.php">About</a></li>
-                           
-                      <!-- 
-                          <li class="submenu">
-                              <a href="javascript:;">Drop Down</a>
-                              <ul>
-                                  <li><a href="#">Drop Down Page 1</a></li>
-                                  <li><a href="#">Drop Down Page 2</a></li>
-                                  <li><a href="#">Drop Down Page 3</a></li>
-                              </ul>
-                          </li>
-                      -->
-                          
-                          <li class="scroll-to-section"><a href="index.php">Chefs</a></li> 
-                          <!-- <li class="submenu">
-                              <a href="javascript:;">Features</a>
-                              <ul>
-                                  <li><a href="#">Features Page 1</a></li>
-                                  <li><a href="#">Features Page 2</a></li>
-                                  <li><a href="#">Features Page 3</a></li>
-                                  <li><a href="#">Features Page 4</a></li>
-                              </ul>
-                          </li> -->
-                          <!-- <li class=""><a rel="sponsored" href="https://templatemo.com" target="_blank">External URL</a></li> -->
-                          <li class="scroll-to-section"><a href="#con-info">Contact Us</a></li> 
-                          <li class="scroll-to-section"><a href="menu.html">Menu</a></li>
-                          <li class="scroll-to-section"><a href="login.html">Log in / Register</a></li>
-                      </ul>        
-                      <a class='menu-trigger'>
-                          <span>Menu</span>
-                      </a>
-                      <!-- ***** Menu End ***** -->
-                  </nav>
-              </div>
-          </div>
-      </div>
-  </header>
+    <?php 
+        include('header.php');
+    ?>
 
     <section class="section" id="reservation">
         <div class="container">
@@ -131,7 +84,7 @@
 						  </div>
 							<div class="col-lg-12 text-center mt-2">
     <small>
-        Don't have an account yet? <a href="register.html" style="color: #FF0000; text-decoration: none;">Register here!</a>
+        Don't have an account yet? <a href="register.php" style="color: #FF0000; text-decoration: none;">Register here!</a>
     </small>
 </div>
                         </form>
