@@ -22,56 +22,9 @@
 </head>
 <body>
     
-    <header class="header-area header-sticky">
-        <div class="container-xxl">
-            <div class="row">
-                <div class="col-12">
-                    <nav class="main-nav">
-                        <!-- ***** Logo Start ***** -->
-                        <a href="index.php" class="logo">
-                        <img class= "pasta-logo" src="assets/custom-images/Pasta La Vista Logo.png" align="klassy cafe html template">
-                        </a>
-                        <!-- ***** Logo End ***** -->
-                        <!-- ***** Menu Start ***** -->
-                        <ul class="nav">
-                            <li class="scroll-to-section"><a href="index.php">Home</a></li>
-                            <li class="scroll-to-section"><a href="index.php">About</a></li>
-                           	
-                        <!-- 
-                            <li class="submenu">
-                                <a href="javascript:;">Drop Down</a>
-                                <ul>
-                                    <li><a href="#">Drop Down Page 1</a></li>
-                                    <li><a href="#">Drop Down Page 2</a></li>
-                                    <li><a href="#">Drop Down Page 3</a></li>
-                                </ul>
-                            </li>
-                        -->
-                            
-                            <li class="scroll-to-section"><a href="index.php">Chefs</a></li> 
-                            <!-- <li class="submenu">
-                                <a href="javascript:;">Features</a>
-                                <ul>
-                                    <li><a href="#">Features Page 1</a></li>
-                                    <li><a href="#">Features Page 2</a></li>
-                                    <li><a href="#">Features Page 3</a></li>
-                                    <li><a href="#">Features Page 4</a></li>
-                                </ul>
-                            </li> -->
-                            <!-- <li class=""><a rel="sponsored" href="https://templatemo.com" target="_blank">External URL</a></li> -->
-                            <li class="scroll-to-section"><a href="#con-info">Contact Us</a></li> 
-                            <li class="scroll-to-section"><a href="menu.html" class="active">Menu</a></li>
-                            <li class="scroll-to-section"><a href="login.html">Log in / Register</a></li>
-                        </ul>        
-                        <a class='menu-trigger'>
-                            <span>Menu</span>
-                        </a>
-                        <!-- ***** Menu End ***** -->
-                    </nav>
-                </div>
-            </div>
-        </div>
-    </header>
+   <?php 
+    include('header.php');
+   ?>
     <section class="section section-img-bg" id="offers">
         <div class="container-lg">
             <div class="row justify-content-center">
@@ -129,7 +82,7 @@
                     <div class="col-md-6">
                         <div class="row justify-content-center">
                             <div class="col-3">
-                                <img src="assets/custom-images/Breakfast Images/1.png" alt="Breakfast Carbonara" class="image-resize">
+                                <img src="assets/custom-images/Breakfast Images/1.png" alt="Breakfast Carbonara" class="image-resize rounded-circle border-thick">
                             </div>
                             <div class="col-6 text-md-start">
                                 <div>
@@ -137,15 +90,17 @@
                                     <p class="text-muted fs-6">Creamy carbonara tossed with crispy pancetta and pecorino.</p>
                                 </div>
                             </div>
-                            <div class="col-3 d-flex text-center">
-                                <h3 class="rounded bg-success text-white d-flex align-items-center justify-content-center flex-grow-1 m-lg-1 m-2">$18</h3>
+                            <div class="col-3 d-flex text-center justify-content-center align-items-center">
+                                <div class="price-holder">
+                                    <h3 class="rounded bg-success text-white d-flex align-items-center justify-content-center h-100 w-100 m-lg-1 m-2">$18</h3>
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="row justify-content-center">
                             <div class="col-3">
-                                <img src="assets/custom-images/Breakfast Images/2.png" alt="Raviolo al Uovo" class="image-resize">
+                                <img src="assets/custom-images/Breakfast Images/2.png" alt="Raviolo al Uovo" class="image-resize rounded-circle border-thick">
                             </div>
                             <div class="col-6 text-md-start">
                                 <div>
@@ -154,8 +109,10 @@
                                     </p>
                                 </div>
                             </div>
-                            <div class="col-3 d-flex text-center">
-                                <h3 class="rounded bg-success text-white d-flex align-items-center justify-content-center flex-grow-1 m-lg-1 m-2">$22</h3>
+                            <div class="col-3 d-flex text-center justify-content-center align-items-center">
+                                <div class="price-holder">
+                                    <h3 class="rounded bg-success text-white d-flex align-items-center justify-content-center h-100 w-100 m-lg-1 m-2">$22</h3>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -164,7 +121,7 @@
                     <div class="col-md-6">
                         <div class="row justify-content-center">
                             <div class="col-3">
-                                <img src="assets/custom-images/Breakfast Images/3.png" alt="Tiramisu Pancake" class="image-resize">
+                                <img src="assets/custom-images/Breakfast Images/3.png" alt="Tiramisu Pancake" class="image-resize rounded-circle border-thick">
                             </div>
                             <div class="col-6 text-md-start">
                                 <div>
@@ -172,15 +129,17 @@
                                     <p class="text-muted fs-6">Layers of espresso-soaked pancakes, mascarpone cream, and cocoa dusting.</p>
                                 </div>
                             </div>
-                            <div class="col-3 d-flex text-center">
-                                <h3 class="rounded bg-success text-white d-flex align-items-center justify-content-center flex-grow-1 m-lg-1 m-2">$16</h3>
+                            <div class="col-3 d-flex text-center justify-content-center align-items-center">
+                                <div class="price-holder">
+                                    <h3 class="rounded bg-success text-white d-flex align-items-center justify-content-center h-100 w-100 m-lg-1 m-2">$16</h3>
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="row justify-content-center">
                             <div class="col-3">
-                                <img src="assets/custom-images/Breakfast Images/4.png" alt="Caprese Avocado Toast" class="image-resize">
+                                <img src="assets/custom-images/Breakfast Images/4.png" alt="Caprese Avocado Toast" class="image-resize rounded-circle border-thick">
                             </div>
                             <div class="col-6 text-md-start">
                                 <div>
@@ -188,8 +147,10 @@
                                     <p class="text-muted fs-6">Toasted ciabatta with avocado, cherry tomatoes, mozzarella, and balsamic drizzle.</p>
                                 </div>
                             </div>
-                            <div class="col-3 d-flex text-center">
-                                <h3 class="rounded bg-success text-white d-flex align-items-center justify-content-center flex-grow-1 m-lg-1 m-2">$14</h3>
+                            <div class="col-3 d-flex text-center justify-content-center align-items-center">
+                                <div class="price-holder">
+                                    <h3 class="rounded bg-success text-white d-flex align-items-center justify-content-center h-100 w-100 m-lg-1 m-2">$14</h3>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -198,7 +159,7 @@
                     <div class="col-md-6">
                         <div class="row justify-content-center">
                             <div class="col-3">
-                                <img src="assets/custom-images/Breakfast Images/5.png" alt="Lemon Ricotta Waffles" class="image-resize">
+                                <img src="assets/custom-images/Breakfast Images/5.png" alt="Lemon Ricotta Waffles" class="image-resize rounded-circle border-thick">
                             </div>
                             <div class="col-6 text-md-start">
                                 <div>
@@ -207,15 +168,17 @@
                                     </p>
                                 </div>
                             </div>
-                            <div class="col-3 d-flex text-center">
-                                <h3 class="rounded bg-success text-white d-flex align-items-center justify-content-center flex-grow-1 m-lg-1 m-2">$15</h3>
+                            <div class="col-3 d-flex text-center justify-content-center align-items-center">
+                                <div class="price-holder">
+                                    <h3 class="rounded bg-success text-white d-flex align-items-center justify-content-center h-100 w-100 m-lg-1 m-2">$15</h3>
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="row justify-content-center">
                             <div class="col-3">
-                                <img src="assets/custom-images/Breakfast Images/6.png" alt="Ricotta Pasta Bowl" class="image-resize">
+                                <img src="assets/custom-images/Breakfast Images/6.png" alt="Ricotta Pasta Bowl" class="image-resize rounded-circle border-thick">
                             </div>
                             <div class="col-6 text-md-start">
                                 <div>
@@ -223,8 +186,10 @@
                                     <p class="text-muted fs-6">Spaghetti pasta with lemon zest, ricotta, and spinach.</p>
                                 </div>
                             </div>
-                            <div class="col-3 d-flex text-center">
-                                <h3 class="rounded bg-success text-white d-flex align-items-center justify-content-center flex-grow-1 m-lg-1 m-2">$17</h3>
+                            <div class="col-3 d-flex text-center justify-content-center align-items-center">
+                                <div class="price-holder">
+                                    <h3 class="rounded bg-success text-white d-flex align-items-center justify-content-center h-100 w-100 m-lg-1 m-2">$17</h3>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -252,7 +217,7 @@
                     <div class="col-md-6">
                         <div class="row justify-content-center">
                             <div class="col-3">
-                                <img src="assets/custom-images/Lunch Images/1.jpg" alt="Cacio Pepe" class="image-resize">
+                                <img src="assets/custom-images/Lunch Images/1.jpg" alt="Cacio Pepe" class="image-resize rounded-circle border-thick">
                             </div>
                             <div class="col-6 text-md-start">
                                 <div>
@@ -260,15 +225,17 @@
                                     <p class="text-muted fs-6">Tonnarelli pasta tossed with pecorino and black pepper for a creamy, cheesy delight.</p>
                                 </div>
                             </div>
-                            <div class="col-3 d-flex text-center">
-                                <h3 class="rounded bg-success text-white d-flex align-items-center justify-content-center flex-grow-1 m-lg-1 m-2">$24</h3>
+                            <div class="col-3 d-flex text-center justify-content-center align-items-center">
+                                <div class="price-holder">
+                                    <h3 class="rounded bg-success text-white d-flex align-items-center justify-content-center h-100 w-100 m-lg-1 m-2">$24</h3>
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="row justify-content-center">
                             <div class="col-3">
-                                <img src="assets/custom-images/Lunch Images/2.jpg" alt="Pesto Fusilli" class = "image-resize">
+                                <img src="assets/custom-images/Lunch Images/2.jpg" alt="Pesto Fusilli" class = "image-resize rounded-circle border-thick">
                             </div>
                             <div class="col-6 text-md-start">
                                 <div>
@@ -276,8 +243,10 @@
                                     <p class="text-muted fs-6">Twisted fusilli coated in basil pesto, topped with fresh burrata and cherry tomatoes.</p>
                                 </div>
                             </div>
-                            <div class="col-3 d-flex text-center">
-                                <h3 class="rounded bg-success text-white d-flex align-items-center justify-content-center flex-grow-1 m-lg-1 m-2">$20</h3>
+                            <div class="col-3 d-flex text-center justify-content-center align-items-center">
+                                <div class="price-holder">
+                                    <h3 class="rounded bg-success text-white d-flex align-items-center justify-content-center h-100 w-100 m-lg-1 m-2">$20</h3>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -286,7 +255,7 @@
                     <div class="col-md-6">
                         <div class="row justify-content-center">
                             <div class="col-3">
-                                <img src="assets/custom-images/Lunch Images/3.jpg" alt="Lasagna Bolognese" class = "image-resize">
+                                <img src="assets/custom-images/Lunch Images/3.jpg" alt="Lasagna Bolognese" class = "image-resize rounded-circle border-thick">
                             </div>
                             <div class="col-6 text-md-start">
                                 <div>
@@ -294,15 +263,17 @@
                                     <p class="text-muted fs-6">Layers of slow-cooked meat sauce, béchamel, and pasta sheets baked to perfection.</p>
                                 </div>
                             </div>
-                            <div class="col-3 d-flex text-center">
-                                <h3 class="rounded bg-success text-white d-flex align-items-center justify-content-center flex-grow-1 m-lg-1 m-2">$26</h3>
+                            <div class="col-3 d-flex text-center justify-content-center align-items-center">
+                                <div class="price-holder">
+                                    <h3 class="rounded bg-success text-white d-flex align-items-center justify-content-center h-100 w-100 m-lg-1 m-2">$26</h3>
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="row justify-content-center">
                             <div class="col-3">
-                                <img src="assets/custom-images/Lunch Images/4.jpg" alt="Shrimp Tagliatelle" class = "image-resize">
+                                <img src="assets/custom-images/Lunch Images/4.jpg" alt="Shrimp Tagliatelle" class = "image-resize rounded-circle border-thick">
                             </div>
                             <div class="col-6 text-md-start">
                                 <div>
@@ -310,8 +281,10 @@
                                     <p class="text-muted fs-6">Buttered tagliatelle with garlic shrimp, white wine, and a hint of lemon.</p>
                                 </div>
                             </div>
-                            <div class="col-3 d-flex text-center">
-                                <h3 class="rounded bg-success text-white d-flex align-items-center justify-content-center flex-grow-1 m-lg-1 m-2">$28</h3>
+                            <div class="col-3 d-flex text-center justify-content-center align-items-center">
+                                <div class="price-holder">
+                                    <h3 class="rounded bg-success text-white d-flex align-items-center justify-content-center h-100 w-100 m-lg-1 m-2">$28</h3>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -320,7 +293,7 @@
                     <div class="col-md-6">
                         <div class="row justify-content-center">
                             <div class="col-3">
-                                <img src="assets/custom-images/Lunch Images/5.jpg" alt="Truffle Risotto" class="image-resize">
+                                <img src="assets/custom-images/Lunch Images/5.jpg" alt="Truffle Risotto" class="image-resize rounded-circle border-thick">
                             </div>
                             <div class="col-6 text-md-start">
                                 <div>
@@ -328,15 +301,17 @@
                                     <p class="text-muted fs-6">Creamy risotto-style orzo with truffle oil, wild mushrooms, and parmesan.</p>
                                 </div>
                             </div>
-                            <div class="col-3 d-flex text-center">
-                                <h3 class="rounded bg-success text-white d-flex align-items-center justify-content-center flex-grow-1 m-lg-1 m-2">$30</h3>
+                            <div class="col-3 d-flex text-center justify-content-center align-items-center">
+                                <div class="price-holder">
+                                    <h3 class="rounded bg-success text-white d-flex align-items-center justify-content-center h-100 w-100 m-lg-1 m-2">$30</h3>
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="row justify-content-center">
                             <div class="col-3">
-                                <img src="assets/custom-images/Lunch Images/6.jpg" alt="Caprese Salad" class="image-resize">
+                                <img src="assets/custom-images/Lunch Images/6.jpg" alt="Caprese Salad" class="image-resize rounded-circle border-thick">
                             </div>
                             <div class="col-6 text-md-start">
                                 <div>
@@ -344,8 +319,10 @@
                                     <p class="text-muted fs-6">Chilled orecchiette with fresh mozzarella, tomatoes, basil, and balsamic glaze.</p>
                                 </div>
                             </div>
-                            <div class="col-3 d-flex text-center">
-                                <h3 class="rounded bg-success text-white d-flex align-items-center justify-content-center flex-grow-1 m-lg-1 m-2">$18</h3>
+                            <div class="col-3 d-flex text-center justify-content-center align-items-center">
+                                <div class="price-holder">
+                                    <h3 class="rounded bg-success text-white d-flex align-items-center justify-content-center h-100 w-100 m-lg-1 m-2">$18</h3>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -373,7 +350,7 @@
                     <div class="col-md-6">
                         <div class="row justify-content-center">
                             <div class="col-3">
-                                <img src="assets/custom-images/Dinner Images/1.jpg" alt="Veal Piccata" class="image-resize">
+                                <img src="assets/custom-images/Dinner Images/1.jpg" alt="Veal Piccata" class="image-resize rounded-circle border-thick">
                             </div>
                             <div class="col-6 text-md-start">
                                 <div>
@@ -382,15 +359,17 @@
                                     </p>
                                 </div>
                             </div>
-                            <div class="col-3 d-flex text-center">
-                                <h3 class="rounded bg-success text-white d-flex align-items-center justify-content-center flex-grow-1 m-lg-1 m-2">$28</h3>
+                            <div class="col-3 d-flex text-center justify-content-center align-items-center">
+                                <div class="price-holder">
+                                    <h3 class="rounded bg-success text-white d-flex align-items-center justify-content-center h-100 w-100 m-lg-1 m-2">$28</h3>
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="row justify-content-center">
                             <div class="col-3">
-                                <img src="assets/custom-images/Dinner Images/2.jpg" alt="Braciole" class="image-resize">
+                                <img src="assets/custom-images/Dinner Images/2.jpg" alt="Braciole" class="image-resize rounded-circle border-thick">
                             </div>
                             <div class="col-6 text-md-start">
                                 <div>
@@ -398,8 +377,10 @@
                                     <p class="text-muted fs-6">Flank steak rolled with prosciutto, breadcrumbs, cheese, and pine nuts, simmered in tomato sauce.</p>
                                 </div>
                             </div>
-                            <div class="col-3 d-flex text-center">
-                                <h3 class="rounded bg-success text-white d-flex align-items-center justify-content-center flex-grow-1 m-lg-1 m-2">$26</h3>
+                            <div class="col-3 d-flex text-center justify-content-center align-items-center">
+                                <div class="price-holder">
+                                    <h3 class="rounded bg-success text-white d-flex align-items-center justify-content-center h-100 w-100 m-lg-1 m-2">$26</h3>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -408,7 +389,7 @@
                     <div class="col-md-6">
                         <div class="row justify-content-center">
                             <div class="col-3">
-                                <img src="assets/custom-images/Dinner Images/3.jpg" alt="Osso Buco" class="image-resize">
+                                <img src="assets/custom-images/Dinner Images/3.jpg" alt="Osso Buco" class="image-resize rounded-circle border-thick">
                             </div>
                             <div class="col-6 text-md-start">
                                 <div>
@@ -417,15 +398,17 @@
                                     </p>
                                 </div>
                             </div>
-                            <div class="col-3 d-flex text-center">
-                                <h3 class="rounded bg-success text-white d-flex align-items-center justify-content-center flex-grow-1 m-lg-1 m-2">$32</h3>
+                            <div class="col-3 d-flex text-center justify-content-center align-items-center">
+                                <div class="price-holder">
+                                    <h3 class="rounded bg-success text-white d-flex align-items-center justify-content-center h-100 w-100 m-lg-1 m-2">$32</h3>
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="row justify-content-center">
                             <div class="col-3">
-                                <img src="assets/custom-images/Dinner Images/4.jpg" alt="Cacciatore" class="image-resize">
+                                <img src="assets/custom-images/Dinner Images/4.jpg" alt="Cacciatore" class="image-resize rounded-circle border-thick">
                             </div>
                             <div class="col-6 text-md-start">
                                 <div>
@@ -434,8 +417,10 @@
                                     </p>
                                 </div>
                             </div>
-                            <div class="col-3 d-flex text-center">
-                                <h3 class="rounded bg-success text-white d-flex align-items-center justify-content-center flex-grow-1 m-lg-1 m-2">$22</h3>
+                            <div class="col-3 d-flex text-center justify-content-center align-items-center">
+                                <div class="price-holder">
+                                    <h3 class="rounded bg-success text-white d-flex align-items-center justify-content-center h-100 w-100 m-lg-1 m-2">$22</h3>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -444,7 +429,7 @@
                     <div class="col-md-6">
                         <div class="row justify-content-center">
                             <div class="col-3">
-                                <img src="assets/custom-images/Dinner Images/5.jpg" alt="Polenta" class="image-resize">
+                                <img src="assets/custom-images/Dinner Images/5.jpg" alt="Polenta" class="image-resize rounded-circle border-thick">
                             </div>
                             <div class="col-6 text-md-start">
                                 <div>
@@ -453,15 +438,17 @@
                                     </p>
                                 </div>
                             </div>
-                            <div class="col-3 d-flex text-center">
-                                <h3 class="rounded bg-success text-white d-flex align-items-center justify-content-center flex-grow-1 m-lg-1 m-2">$14</h3>
+                            <div class="col-3 d-flex text-center justify-content-center align-items-center">
+                                <div class="price-holder">
+                                    <h3 class="rounded bg-success text-white d-flex align-items-center justify-content-center h-100 w-100 m-lg-1 m-2">$14</h3>
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="row justify-content-center">
                             <div class="col-3">
-                                <img src="assets/custom-images/Dinner Images/6.jpg" alt="Pappardelle" class="image-resize">
+                                <img src="assets/custom-images/Dinner Images/6.jpg" alt="Pappardelle" class="image-resize rounded-circle border-thick">
                             </div>
                             <div class="col-6 text-md-start">
                                 <div>
@@ -469,8 +456,10 @@
                                     <p class="text-muted fs-6">Wide, flat pasta served with rich sauces like ragu or creamy mushrooms.</p>
                                 </div>
                             </div>
-                            <div class="col-3 d-flex text-center">
-                                <h3 class="rounded bg-success text-white d-flex align-items-center justify-content-center flex-grow-1 m-lg-1 m-2">$18</h3>
+                            <div class="col-3 d-flex text-center justify-content-center align-items-center">
+                                <div class="price-holder">
+                                    <h3 class="rounded bg-success text-white d-flex align-items-center justify-content-center h-100 w-100 m-lg-1 m-2">$18</h3>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -498,7 +487,7 @@
                     <div class="col-md-6">
                         <div class="row justify-content-center">
                             <div class="col-3">
-                                <img src="assets/custom-images/Pastry Images/1.jpg" alt="Cannoli" class="image-resize">
+                                <img src="assets/custom-images/Pastry Images/1.jpg" alt="Cannoli" class="image-resize rounded-circle border-thick">
                             </div>
                             <div class="col-6 text-md-start">
                                 <div>
@@ -506,15 +495,17 @@
                                     <p class="text-muted fs-6">Crispy fried pastry tubes filled with sweet ricotta with chocolate chips.</p>
                                 </div>
                             </div>
-                            <div class="col-3 d-flex text-center">
-                                <h3 class="rounded bg-success text-white d-flex align-items-center justify-content-center flex-grow-1 m-lg-1 m-2">$8</h3>
+                            <div class="col-3 d-flex text-center justify-content-center align-items-center">
+                                <div class="price-holder">
+                                    <h3 class="rounded bg-success text-white d-flex align-items-center justify-content-center h-100 w-100 m-lg-1 m-2">$8</h3>
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="row justify-content-center">
                             <div class="col-3">
-                                <img src="assets/custom-images/Pastry Images/2.png" alt="Sfogliatella" class="image-resize">
+                                <img src="assets/custom-images/Pastry Images/2.png" alt="Sfogliatella" class="image-resize rounded-circle border-thick">
                             </div>
                             <div class="col-6 text-md-start">
                                 <div>
@@ -522,8 +513,10 @@
                                     <p class="text-muted fs-6">Flaky, layered pastry shaped like a seashell, filled with ricotta and citrus zest.</p>
                                 </div>
                             </div>
-                            <div class="col-3 d-flex text-center">
-                                <h3 class="rounded bg-success text-white d-flex align-items-center justify-content-center flex-grow-1 m-lg-1 m-2">$9</h3>
+                            <div class="col-3 d-flex text-center justify-content-center align-items-center">
+                                <div class="price-holder">
+                                    <h3 class="rounded bg-success text-white d-flex align-items-center justify-content-center h-100 w-100 m-lg-1 m-2">$9</h3>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -532,7 +525,7 @@
                     <div class="col-md-6">
                         <div class="row justify-content-center">
                             <div class="col-3">
-                                <img src="assets/custom-images/Pastry Images/3.jpeg" alt="Tiramisu" class="image-resize">
+                                <img src="assets/custom-images/Pastry Images/3.jpeg" alt="Tiramisu" class="image-resize rounded-circle border-thick">
                             </div>
                             <div class="col-6 text-md-start">
                                 <div>
@@ -540,15 +533,17 @@
                                     <p class="text-muted fs-6">Coffee-soaked ladyfingers layered with mascarpone cream and dusted with cocoa powder.</p>
                                 </div>
                             </div>
-                            <div class="col-3 d-flex text-center">
-                                <h3 class="rounded bg-success text-white d-flex align-items-center justify-content-center flex-grow-1 m-lg-1 m-2">$9</h3>
+                            <div class="col-3 d-flex text-center justify-content-center align-items-center">
+                                <div class="price-holder">
+                                    <h3 class="rounded bg-success text-white d-flex align-items-center justify-content-center h-100 w-100 m-lg-1 m-2">$9</h3>
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="row justify-content-center">
                             <div class="col-3">
-                                <img src="assets/custom-images/Pastry Images/4.png" alt="Zeppole" class="image-resize">
+                                <img src="assets/custom-images/Pastry Images/4.png" alt="Zeppole" class="image-resize rounded-circle border-thick">
                             </div>
                             <div class="col-6 text-md-start">
                                 <div>
@@ -556,8 +551,10 @@
                                     <p class="text-muted fs-6">Light, deep-fried dough balls, topped with powdered sugar and paired with whipped cream.</p>
                                 </div>
                             </div>
-                            <div class="col-3 d-flex text-center">
-                                <h3 class="rounded bg-success text-white d-flex align-items-center justify-content-center flex-grow-1 m-lg-1 m-2">$7</h3>
+                            <div class="col-3 d-flex text-center justify-content-center align-items-center">
+                                <div class="price-holder">
+                                    <h3 class="rounded bg-success text-white d-flex align-items-center justify-content-center h-100 w-100 m-lg-1 m-2">$7</h3>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -566,7 +563,7 @@
                     <div class="col-md-6">
                         <div class="row justify-content-center">
                             <div class="col-3">
-                                <img src="assets/custom-images/Pastry Images/5.png" alt="Maritozzo" class="image-resize">
+                                <img src="assets/custom-images/Pastry Images/5.png" alt="Maritozzo" class="image-resize rounded-circle border-thick">
                             </div>
                             <div class="col-6 text-md-start">
                                 <div>
@@ -574,15 +571,17 @@
                                     <p class="text-muted fs-6">A soft, slightly sweet bun filled with whipped cream.</p>
                                 </div>
                             </div>
-                            <div class="col-3 d-flex text-center">
-                                <h3 class="rounded bg-success text-white d-flex align-items-center justify-content-center flex-grow-1 m-lg-1 m-2">$6</h3>
+                            <div class="col-3 d-flex text-center justify-content-center align-items-center">
+                                <div class="price-holder">
+                                    <h3 class="rounded bg-success text-white d-flex align-items-center justify-content-center h-100 w-100 m-lg-1 m-2">$6</h3>
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="row justify-content-center">
                             <div class="col-3">
-                                <img src="assets/custom-images/Pastry Images/6.png" alt="Torta Caprese" class="image-resize">
+                                <img src="assets/custom-images/Pastry Images/6.png" alt="Torta Caprese" class="image-resize rounded-circle border-thick">
                             </div>
                             <div class="col-6 text-md-start">
                                 <div>
@@ -590,8 +589,10 @@
                                     <p class="text-muted fs-6">A dense, flourless rich and fudgy chocolate almond cake.</p>
                                 </div>
                             </div>
-                            <div class="col-3 d-flex text-center">
-                                <h3 class="rounded bg-success text-white d-flex align-items-center justify-content-center flex-grow-1 m-lg-1 m-2">$10</h3>
+                            <div class="col-3 d-flex text-center justify-content-center align-items-center">
+                                <div class="price-holder">
+                                    <h3 class="rounded bg-success text-white d-flex align-items-center justify-content-center h-100 w-100 m-lg-1 m-2">$10</h3>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -655,7 +656,7 @@
 <script src="assets/js/isotope.js"></script> 
 
 <!-- Global Init -->
-<!-- <script src="assets/js/custom.js"></script> -->
+<script src="assets/js/custom.js"></script>
 <script>
 
     $(function() {
