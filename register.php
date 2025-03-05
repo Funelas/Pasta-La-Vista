@@ -22,6 +22,62 @@
     </div>  
     <?php 
         include('header.php');
+        include('connections.php');
+
+        $name = $nameErr = $email = $emailErr = $password = $passwordErr = $retypepassword = $retypepasswordErr = "" ;
+
+        if ($_SERVER["REQUEST_METHOD"] == "POST"){
+            if($_POST["name"]){
+                $name = htmlspecialchars($_POST["name"]);
+            }else{
+                $nameErr = "Name is required.";
+            }
+            if($_POST["email"]){
+                $email = htmlspecialchars($_POST["email"]);
+            }else{
+                $emailErr = "Email is required.";
+            }
+            if($_POST["password"]){
+                $password = htmlspecialchars($_POST["password"]);
+            }else{
+                $passwordErr = "Password is required.";
+            }
+            if($_POST["retypepassword"]){
+                $retypepassword = htmlspecialchars($_POST["retypepassword"]);
+            }else{
+                $retypepasswordErr = "password is required.";
+            }
+
+            if($_POST["retypepassword"] != $_POST["password"]){
+                $retypepasswordErr = $passwordErr = "Password does not match.";
+            }
+
+            if($name && $password && $email && ($password == $retypepassword)){
+                $emails = mysqli_query($connections, "SELECT * FROM customer_accounts WHERE email = '$email'");
+                $email_duplicates = mysqli_num_rows($emails);
+                if ($email_duplicates){
+                    $emailErr = "Email is already taken.";
+                }else{
+                    mysqli_query($connections, "INSERT INTO customer_accounts (name, email, password) VALUES ('$name','$email','$retypepassword')");
+                    $name = $nameErr = $email = $emailErr = $password = $passwordErr = $retypepassword = $retypepasswordErr = "" ;
+                    echo "
+                        <script src='https://cdn.jsdelivr.net/npm/sweetalert2@11'></script>
+                        <script>
+                        Swal.fire({
+                            title: 'Success!',
+                            text: 'Your information has been saved 🎉',
+                            icon: 'success',
+                            timer: 3000,
+                            showConfirmButton: false
+                        }).then(() => {
+                            window.location.href = 'menu.php';
+                        });
+                        </script>";
+                }
+            }
+        }
+
+
     ?>
 
     <section class="section" id="reservation">
@@ -29,24 +85,33 @@
             <div class="row justify-content-center">
                 <div class="col-lg-6">
                     <div class="contact-form">
-                        <form id="contact" action="index.php" method="post">
+                        <form id="contact" method= "POST" action= "register.php">
                           <div class="row">
                             <div class="col-lg-12">
                                 <h4>Sign Up</h4>
                             </div>
                             <div class="col-lg-6 col-sm-12 col-xl-12">
                               <fieldset>
-                                <input name="name" type="text" id="name" placeholder="Name*" required="">
+                                <input name="name" type="text" id="name" placeholder="Name*" class="m-2" value = <?php echo htmlspecialchars($name); ?>>
+                                <span class="pl-2 text-danger"><small><?php echo $nameErr; ?></small></span>
                               </fieldset>
                             </div>
                             <div class="col-lg-6 col-sm-12 col-xl-12">
                               <fieldset>
-                              <input name="email" type="text" id="email" pattern="[^ @]*@[^ @]*" placeholder="Email Address*" required="">
+                              <input name="email" type="text" id="email" pattern="[^ @]*@[^ @]*" placeholder="Email Address*" class="m-2" value = <?php echo $email; ?>>
+                              <span class="pl-2 text-danger"><small><?php echo $emailErr; ?></small></span>
                             </fieldset>
                             </div>
                             <div class="col-lg-6 col-sm-12 col-xl-12">
                               <fieldset>
-                                <input name="password" type="password" id="password" placeholder="Password*" required="">
+                                <input name="password" type="password" id="password" placeholder="Password*" class="m-2" value = <?php echo $password; ?>>
+                                <span class="pl-2 text-danger"><small><?php echo $passwordErr; ?></small></span>
+                              </fieldset>
+                            </div>
+                            <div class="col-lg-6 col-sm-12 col-xl-12">
+                              <fieldset>
+                                <input name="retypepassword" type="password" id="retypepassword" placeholder="Retype Password*" class="m-2" value = <?php echo $retypepassword; ?>>
+                                <span class="pl-2 text-danger"><small><?php echo $passwordErr; ?></small></span>
                               </fieldset>
                             </div>
                             <div class="col-lg-12">
@@ -68,6 +133,7 @@
                 </div>
             </div>
         </div>
+    
     </section>
     <footer id="con-info">
         <div class="container">

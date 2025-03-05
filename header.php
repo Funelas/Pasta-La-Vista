@@ -17,7 +17,11 @@
                         <!-- ***** Menu Start ***** -->
                         <ul class="nav">
                             
-                            <li class="scroll-to-section"><a href="index.php#top" class="<?php 
+                            <li class="scroll-to-section"><a href="<?php if($current_page == 'index.php'){
+                                echo "index.php#top";
+                            }else{
+                                echo "index.php";
+                            }?>" class="<?php 
                                 if($current_page == 'index.php'){
                                     echo 'active';
                                 }else{
@@ -25,7 +29,11 @@
                                 }
                             ?>">Home</a></li>
                             <?php if($current_page == 'index.php'){ ?>
-                                <li class="scroll-to-section"><a href="index.php#about">About</a></li>
+                                <li class="scroll-to-section"><a href="<?php if($current_page == 'index.php'){
+                                echo "index.php#about";
+                            }else{
+                                echo "index.php";
+                            }?>">About</a></li>
                            	
                         <!-- 
                             <li class="submenu">
@@ -38,8 +46,16 @@
                             </li>
                         -->
                             
-                                <li class="scroll-to-section"><a href="index.php#chefs">Chefs</a></li> 
-                                <li class="scroll-to-section"><a href="<?php echo $current_page;?>#con-info">Contact Us</a></li> 
+                                <li class="scroll-to-section"><a href="<?php if($current_page == 'index.php'){
+                                echo "index.php#chefs";
+                            }else{
+                                echo "index.php";
+                            }?>">Chefs</a></li> 
+                                <li class="scroll-to-section"><a href="<?php if($current_page == 'index.php'){
+                                echo "index.php#con-info";
+                            }else{
+                                echo "index.php";
+                            }?>">Contact Us</a></li> 
                             <?php } ?>
                             <!-- <li class="submenu">
                                 <a href="javascript:;">Features</a>
