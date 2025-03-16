@@ -1,6 +1,5 @@
 <?php 
     session_start();
-
     $current_page = basename($_SERVER['PHP_SELF']);
 ?>
 
@@ -75,7 +74,7 @@
                                     echo '';
                                 }
                             ?>">Menu</a></li>
-                            <?php if(isset($_SESSION)){ ?>
+                            <?php if((isset($_SESSION['name']))){ ?>
                             <li class="scroll-to-section"><a href="login.php" class="<?php 
                                 if($current_page == 'login.php' | $current_page == 'register.php'){
                                     echo 'active';
