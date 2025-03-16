@@ -1,3 +1,47 @@
+<?php 
+    include('connections.php');
+    $email = $password = $emailErr = $passwordErr = "";
+    if ($_SERVER["REQUEST_METHOD"] == "POST"){
+        if ($_POST['email']){
+            $email = trim($_POST['email']);
+        }
+        if ($_POST['password']){
+            $password = trim($_POST['password']);
+        }
+        if ($email && $password){
+            $query = mysqli_prepare($connections, "SELECT id, name, password FROM customer_accounts WHERE email = ?");
+            mysqli_stmt_bind_param($query, 's', $email);
+            mysqli_stmt_execute($query);
+            mysqli_stmt_store_result($query);
+            if (mysqli_stmt_num_rows($query)){
+                $db_id = $db_name = $db_password = '';
+                mysqli_stmt_bind_result($query, $db_id, $db_name, $db_password);
+                mysqli_stmt_fetch($query);
+                if (password_verify($password, $db_password)){
+                    $_SESSION['name'] = $db_name;
+                    $_SESSION['id'] = $db_id ;
+                    header('Location: appointment.php');
+
+                }
+            } else{
+                $emailErr = $passwordErr = "Account is not found.";
+            }
+        }
+        else{
+            if (!$email){
+                $emailErr = 'Email is required.';
+            }
+            if (!$password){
+                $passwordErr = 'Password is required.';
+            }
+        }
+        
+    }
+
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -58,19 +102,21 @@
                 </div> -->
                 <div class="col-lg-6">
                     <div class="contact-form">
-                        <form id="contact" action="index.php" method="post">
+                        <form id="contact" action=<?php echo $_SERVER["PHP_SELF"] ?> method="post">
                           <div class="row">
                             <div class="col-lg-12">
                                 <h4>Log In</h4>
                             </div>
                             <div class="col-lg-6 col-sm-12 col-xl-12">
                               <fieldset>
-                              <input name="email" type="text" id="email" pattern="[^ @]*@[^ @]*" placeholder="Email Address*" required="">
+                              <input name="email" type="text" id="email" pattern="[^ @]*@[^ @]*" placeholder="Email Address*" class= 'my-2' value=<?php echo $email; ?>>
+                              <span class="pl-2 text-danger"><small><?php echo $emailErr; ?></small></span>
                             </fieldset>
                             </div>
                             <div class="col-lg-6 col-sm-12 col-xl-12">
                               <fieldset>
-                                <input name="password" type="password" id="password" placeholder="Password*" required="">
+                                <input name="password" type="password" id="password" placeholder="Password*" class= 'my-2' value=<?php echo $password; ?>>
+                                <span class="pl-2 text-danger"><small><?php echo $passwordErr; ?></small></span>
                               </fieldset>
                             </div>
                             <div class="col-lg-12">

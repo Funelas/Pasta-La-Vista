@@ -28,24 +28,24 @@
 
         if ($_SERVER["REQUEST_METHOD"] == "POST"){
             if($_POST["name"]){
-                $name = htmlspecialchars($_POST["name"]);
+                $name = trim($_POST["name"]);
             }else{
                 $nameErr = "Name is required.";
             }
             if($_POST["email"]){
-                $email = htmlspecialchars($_POST["email"]);
+                $email = trim($_POST["email"]);
             }else{
                 $emailErr = "Email is required.";
             }
             if($_POST["password"]){
-                $password = htmlspecialchars($_POST["password"]);
+                $password = trim($_POST["password"]);
             }else{
                 $passwordErr = "Password is required.";
             }
             if($_POST["retypepassword"]){
-                $retypepassword = htmlspecialchars($_POST["retypepassword"]);
+                $retypepassword = trim($_POST["retypepassword"]);
             }else{
-                $retypepasswordErr = "password is required.";
+                $retypepasswordErr = "Password does not match.";
             }
 
             if($_POST["retypepassword"] != $_POST["password"]){
@@ -53,12 +53,17 @@
             }
 
             if($name && $password && $email && ($password == $retypepassword)){
-                $emails = mysqli_query($connections, "SELECT * FROM customer_accounts WHERE email = '$email'");
-                $email_duplicates = mysqli_num_rows($emails);
-                if ($email_duplicates){
+                $query = mysqli_prepare($connections, "SELECT password FROM customer_accounts WHERE email = ?");
+                mysqli_stmt_bind_param($query, 's', $email);
+                mysqli_stmt_execute($query);
+                mysqli_stmt_store_result($query);
+                if (mysqli_stmt_num_rows($query) > 0){
                     $emailErr = "Email is already taken.";
                 }else{
-                    mysqli_query($connections, "INSERT INTO customer_accounts (name, email, password) VALUES ('$name','$email','$retypepassword')");
+                    $hashed_password = password_hash($retypepassword, PASSWORD_DEFAULT);
+                    $insertQuery = mysqli_prepare($connections, "INSERT INTO customer_accounts (name, email, password) VALUES (?,?,?)");
+                    mysqli_stmt_bind_param($insertQuery, 'sss', $name, $email, $hashed_password);
+                    mysqli_stmt_execute($insertQuery);
                     $name = $nameErr = $email = $emailErr = $password = $passwordErr = $retypepassword = $retypepasswordErr = "" ;
                     echo "
                         <script src='https://cdn.jsdelivr.net/npm/sweetalert2@11'></script>
@@ -92,25 +97,25 @@
                             </div>
                             <div class="col-lg-6 col-sm-12 col-xl-12">
                               <fieldset>
-                                <input name="name" type="text" id="name" placeholder="Name*" class="m-2" value = <?php echo htmlspecialchars($name); ?>>
+                                <input name="name" type="text" id="name" placeholder="Name*" class="my-2" value = <?php echo htmlspecialchars($name); ?>>
                                 <span class="pl-2 text-danger"><small><?php echo $nameErr; ?></small></span>
                               </fieldset>
                             </div>
                             <div class="col-lg-6 col-sm-12 col-xl-12">
                               <fieldset>
-                              <input name="email" type="text" id="email" pattern="[^ @]*@[^ @]*" placeholder="Email Address*" class="m-2" value = <?php echo $email; ?>>
+                              <input name="email" type="text" id="email" pattern="[^ @]*@[^ @]*" placeholder="Email Address*" class="my-2" value = <?php echo $email; ?>>
                               <span class="pl-2 text-danger"><small><?php echo $emailErr; ?></small></span>
                             </fieldset>
                             </div>
                             <div class="col-lg-6 col-sm-12 col-xl-12">
                               <fieldset>
-                                <input name="password" type="password" id="password" placeholder="Password*" class="m-2" value = <?php echo $password; ?>>
+                                <input name="password" type="password" id="password" placeholder="Password*" class="my-2" value = <?php echo $password; ?>>
                                 <span class="pl-2 text-danger"><small><?php echo $passwordErr; ?></small></span>
                               </fieldset>
                             </div>
                             <div class="col-lg-6 col-sm-12 col-xl-12">
                               <fieldset>
-                                <input name="retypepassword" type="password" id="retypepassword" placeholder="Retype Password*" class="m-2" value = <?php echo $retypepassword; ?>>
+                                <input name="retypepassword" type="password" id="retypepassword" placeholder="Retype Password*" class="my-2" value = <?php echo $retypepassword; ?>>
                                 <span class="pl-2 text-danger"><small><?php echo $passwordErr; ?></small></span>
                               </fieldset>
                             </div>
@@ -125,7 +130,7 @@
 						  </div>
 							<div class="col-lg-12 text-center mt-2">
     <small>
-        Already a member? <a href="login.html" style="color: #FF0000; text-decoration: none;">Log In here!</a>
+        Already a member? <a href="login.php" style="color: #FF0000; text-decoration: none;">Log In here!</a>
     </small>
 </div>
                         </form>
